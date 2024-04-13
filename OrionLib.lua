@@ -815,7 +815,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				function LabelFunction:Set(ToChange)
 					LabelFrame.Content.Text = ToChange
 				end
-				return LabelFunction, LabelFrame
+				return LabelFunction
 			end
 			function ElementFunction:AddParagraph(Text, Content)
 				Text = Text or "Text"
