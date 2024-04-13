@@ -7,6 +7,8 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
 
+local LastCreatedObject
+
 local OrionLib = {
 	Elements = {},
 	ThemeObjects = {},
@@ -27,7 +29,7 @@ local OrionLib = {
 	SaveCfg = false
 }
 
---Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
+--Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - d by 7kayoh
 local Icons = {}
 
 local Success, Response = pcall(function()
@@ -136,6 +138,7 @@ local function Create(Name, Properties, Children)
 	for i, v in next, Children or {} do
 		v.Parent = Object
 	end
+	LastCreatedObject = Object
 	return Object
 end
 
@@ -815,7 +818,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				function LabelFunction:Set(ToChange)
 					LabelFrame.Content.Text = ToChange
 				end
-				return LabelFunction
+				return LabelFunction, LastCreatedObject
 			end
 			function ElementFunction:AddParagraph(Text, Content)
 				Text = Text or "Text"
