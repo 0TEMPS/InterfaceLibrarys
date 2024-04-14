@@ -856,7 +856,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				function ParagraphFunction:Set(ToChange)
 					ParagraphFrame.Content.Text = ToChange
 				end
-				return ParagraphFunction, LastCreatedObject.Parent
+				return ParagraphFunction, LastCreatedObject
 			end    
 			function ElementFunction:AddButton(ButtonConfig)
 				ButtonConfig = ButtonConfig or {}
