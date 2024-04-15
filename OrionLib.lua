@@ -912,7 +912,7 @@ function OrionLib:MakeWindow(WindowConfig)
 					ButtonFrame.Content.Text = ButtonText
 				end	
 
-				return Button
+				return Button, LastCreatedObject
 			end    
 			function ElementFunction:AddToggle(ToggleConfig)
 				ToggleConfig = ToggleConfig or {}
