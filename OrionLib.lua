@@ -1,4 +1,4 @@
-
+print("YOUR USING TEMPS SAFE ORION LIB!!!")
 
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
